@@ -1,0 +1,88 @@
+
+<!-- <app-navbar-editar></app-navbar-editar> -->
+<app-navbar-editar></app-navbar-editar>
+<ng-template [ngIf] ="this.permiso =='editar'">
+  <div class="container-sm">
+  <h5>
+    <div class="row">
+      <div class="col"><h3>Datos académicos </h3> 
+        <div  class="col text-danger"> <h6>Modo editar</h6> </div>
+        <div  class="col text-danger">  </div>
+      </div>
+        <div class="col"> </div>
+        <div class="col"> </div>
+      </div>
+   </h5>
+  </div>
+  <div class= "container-sm table-dark">
+  <h5>
+   <br>
+ <p>Institución    : <input type="string" [(ngModel)]="est.institucionEstudios"></p>
+ <p>Nivel          : <input type ="string" [(ngModel)] = "est.nivelEstudios "> </p>
+ <p>Redes          :<input Type ="string" [(ngModel)]= "est.redesEstudios"> </p>
+ <p>Título         : <input Type = "string" [(ngModel)] = "est.tituloEstudios"> </p>
+ <p>Fecha de inicio: <input type="date" [(ngModel)] ="est.fechainicEstudios"></p>
+ <p>Fecha fin      : <input type="date" [(ngModel)] ="est.fechafinEstudios"></p>
+ 
+
+        <p><button (click)="altaEstudios(est)" ><i class="fas fa-plus" title="Confirmar alta"></i></button>
+        <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver alta dada"></i></button>
+  </p>
+  <br>
+ 
+</h5>
+    </div>
+  
+    <div class= "container-sm table-dark">
+  <h5>
+    <tr *ngFor="let est of estud">
+       <p> Institución    : <input type="string" [(ngModel)]="est.institucionEstudios"></p>
+        <p>Nivel          : <input type ="string" [(ngModel)] = "est.nivelEstudios"> </p>
+        <p>redes          :<input Type ="string" [(ngModel)]= "est.redesEstudios"> </p>
+        <p>Título         : <input Type = "string" [(ngModel)] = "est.tituloEstudios"> </p>
+        <p>Fecha de inicio: <input type="date" [(ngModel)] ="est.fechainicEstudios"></p>
+        <p>Fecha fin      : <input type="date" [(ngModel)] ="est.fechafinEstudios"></p>
+         <p><button (click)="modifEstudios(est)"><i class="far fa-edit"title="Confirmar modificación" ></i></button>
+          <button (click)="delEstudios(est)"  style = "margin-left: 10px;"><i class="far fa-trash-alt" title="Borrar dato académico"></i></button>
+          <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver modificación hecha"></i></button>
+        </p>
+          <br>
+      
+        
+        
+       <p class="table-light"></p>
+       
+
+    </tr>
+
+    </h5>
+
+</div>
+
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

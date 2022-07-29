@@ -1,0 +1,48 @@
+<div class="container-sm">
+   
+    <ng-template [ngIf] ="this.permiso=='editar'">
+<h5>
+        <div class="row">
+            <div class="col"><H3>Proyectos Realizados</H3></div>
+            <div class="col"> </div>
+            <a class="col nav-link active"href="editar-proyectos"><img src="/assets/images/icons8-edit-24.png"  alt="modificacion"></a> 
+          </div>
+       
+    </h5>    
+    </ng-template>
+
+
+<ng-template [ngIf] ="this.permiso=='log'">
+<h5>
+    <div class="row">
+        <div class="col"><H3>Proyectos Realizados</H3></div>
+        <div class="col"> </div>
+        <div class="col"> </div>
+      </div>
+   </h5>
+    
+</ng-template>
+</div>
+<div class= "container-sm table-dark">
+   <h5>
+  <br>
+    <tr *ngFor="let pro of proy">
+        <p  class="col text-danger"> <strong>{{pro.nombreProyecto}}</strong></p>
+        <p> <strong> {{pro.fechafinProyecto| date: "dd/MM/yyyy"}} - {{pro.fechafinProyecto| date: "dd/MM/yyyy"}}</strong> </p>
+        
+        <p>Decripción:<strong> {{pro.descripcionProyecto}} </strong> </p>
+        
+        
+
+        <hr>
+        <br>
+       
+       
+
+    </tr>
+
+    </h5>
+
+</div>
+
+   

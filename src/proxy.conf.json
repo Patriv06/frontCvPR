@@ -1,0 +1,110 @@
+{ 
+   
+   
+ "/new/personas": {
+            "target": "https://backcvpatrivas.herokuapp.com",
+            "secure": false,
+            "loglevel":"debug"
+            },
+ "/modif/persona": {
+            "target": "https://backcvpatrivas.herokuapp.com",
+            "secure": false,
+            "loglevel":"debug"
+              },           
+ "/ver/personas": {
+            "target": "https://backcvpatrivas.herokuapp.com",
+            "secure": false,
+            "loglevel":"debug"
+                },        
+"/ver/estudios": {
+             "target": "https://backcvpatrivas.herokuapp.com",
+             "secure": false,
+             "loglevel":"debug"
+                    },                     
+"/delete/estudios/": {
+              "target": "https://backcvpatrivas.herokuapp.com",
+              "secure": false,
+              "loglevel":"debug"
+                            },     
+ "/delete/estudios/entero/": {
+              "target": "https://backcvpatrivas.herokuapp.com",
+              "secure": false,
+              "loglevel":"debug"
+                           },                                
+"/modif/estudios": {
+              "target": "https://backcvpatrivas.herokuapp.com",
+              "secure": false,
+              "loglevel":"debug"
+                             },
+"/new/estudios": {
+              "target": "https://backcvpatrivas.herokuapp.com/",
+              "secure": false,
+              "loglevel":"debug"
+                             },  
+"/ver/trabajo": {
+              "target": "https://backcvpatrivas.herokuapp.com",
+              "secure": false,
+              "loglevel":"debug"
+                                          },                     
+"/delete/trabajo": {
+              "target": "https://backcvpatrivas.herokuapp.com",
+              "secure": false,
+              "loglevel":"debug"
+                                                  },     
+"/modif/trabajo": {
+              "target": "https://backcvpatrivas.herokuapp.com",
+              "secure": false,
+              "loglevel":"debug"
+                                                   },
+"/new/trabajo": {
+              "target": "https://backcvpatrivas.herokuapp.com/",
+              "secure": false,
+              "loglevel":"debug"
+                                                   } ,
+ "/ver/hobbies": {
+             "target": "https://backcvpatrivas.herokuapp.com",
+             "secure": false,
+             "loglevel":"debug"
+                                                                                },                     
+"/delete/hobbies": {
+            "target": "https://backcvpatrivas.herokuapp.com",
+            "secure": false,
+            "loglevel":"debug"
+                                                                                        },     
+"/modif/hobbies": {
+            "target": "https://backcvpatrivas.herokuapp.com",
+            "secure": false,
+            "loglevel":"debug"
+                                                                                         },
+"/new/hobbies": {
+            "target": "https://backcvpatrivas.herokuapp.com/",
+            "secure": false,
+            "loglevel":"debug"
+                                                                                         } ,
+ "/ver/idioma": {
+          "target": "https://backcvpatrivas.herokuapp.com",
+          "secure": false,
+          "loglevel":"debug"
+                   },                     
+"/delete/idioma": {
+   "target": "https://backcvpatrivas.herokuapp.com",
+   "secure": false,
+  "loglevel":"debug"
+                                                                                                                              },     
+"/modif/idioma": {
+     "target": "https://backcvpatrivas.herokuapp.com",
+    "secure": false,
+    "loglevel":"debug"
+                                                                                                                               },
+ "/new/idioma": {
+      "target": "https://backcvpatrivas.herokuapp.com/",
+      "secure": false,
+       "loglevel":"debug"
+                                                                                                                               } 
+                                                                                                                                                                                                                              
+                                                                                                                                                          
+ 
+                                                                      
+    }
+
+              

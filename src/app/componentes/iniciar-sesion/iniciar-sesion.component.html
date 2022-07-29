@@ -1,0 +1,24 @@
+<div class="container ">
+  
+    <div class="card text-center"> 
+      <div class="card-header">
+    
+      <b>Ingrese Usuario y Contraseña o directamente Ingresar para ver sin editar</b> 
+ 
+      </div>
+      <div class="card-body" p-4>
+ 
+     <label style=" float:left;"><b> Email:</b></label> 
+      <p> <input class="form-control m-2" type="email" [(ngModel)]="usuario.email"></p> 
+      <label style="float: left;"><b> Contraseña:</b></label> 
+     <p> <input class="form-control m-2" type ="password" [(ngModel)] = "usuario.password"> </p> 
+     <p><button (click)="Ingresar()" class="btn btn-primary btn-block m-2">Ingresar</button></p>
+   
+    
+ 
+   </div> 
+     </div>  
+  
+ 
+ 
+ 

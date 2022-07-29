@@ -1,0 +1,75 @@
+
+<!-- <app-navbar-editar></app-navbar-editar> -->
+<app-navbar-editar></app-navbar-editar>
+<ng-template [ngIf] ="this.permiso =='editar'">
+  <div class="container-sm">
+  <h5>
+    <div class="row">
+      <div class="col"><h3>Trabajos realizasdos </h3> 
+        <div  class="col text-danger"> <h6>Modo editar</h6> </div>
+        <div  class="col text-danger">  </div>
+      </div>
+        <div class="col"> </div>
+        <div class="col"> </div>
+      </div>
+   </h5>
+  </div>
+  <div class= "container-sm table-dark">
+  <h5>
+   <br>
+ <p>Lugar    : <input type="string" [(ngModel)]="trab.nombreTrabajo"></p>
+ <p>Puesto         : <input type ="string" [(ngModel)] = "trab.puestoTrabajo"> </p>
+ <p>Descripción:<textarea class="form-control" 
+  name="message"
+  rows="8"
+  [(ngModel)]="trab.descripcionTrabajo"
+  #message='ngModel'
+  ></textarea></p> 
+ <p>Tipo         : <input Type = "string" [(ngModel)] = "trab.tipoTrabajo"> </p>
+ <p>Redes      : <input Type = "string" [(ngModel)] = "trab.redesTrabajo"> </p>
+ <p>Fecha de inicio: <input type="date" [(ngModel)] ="trab.fechainicTrabajo"></p>
+ <p>Fecha fin      : <input type="date" [(ngModel)] ="trab.fechafinTrabajo"></p>
+ 
+
+        <p><button (click)="altaTrabajos(trab)" ><i class="fas fa-plus" title="Confirmar alta"></i></button>
+        <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver alta dada"></i></button>
+  </p>
+  <br>
+ 
+</h5>
+    </div>
+  
+    <div class= "container-sm table-dark">
+  <h5>
+    <tr *ngFor="let trab of trabaj">
+       <p>Lugar    : <input type="string" [(ngModel)]="trab.nombreTrabajo"></p>
+       <p>Puesto         : <input type ="string" [(ngModel)] = "trab.puestoTrabajo"> </p>
+       <p>Descripción:<textarea class="form-control" 
+        name="message"
+        rows="8"
+        [(ngModel)]="trab.descripcionTrabajo"
+        #message='ngModel'
+        ></textarea></p> 
+       <p>Tipo         : <input Type = "string" [(ngModel)] = "trab.tipoTrabajo"> </p>
+       <p>Redes      : <input Type = "string" [(ngModel)] = "trab.redesTrabajo"> </p>
+       <p>Fecha de inicio: <input type="date" [(ngModel)] ="trab.fechainicTrabajo"></p>
+       <p>Fecha fin      : <input type="date" [(ngModel)] ="trab.fechafinTrabajo"></p>
+         <p><button (click)="modifTrabajos(trab)"><i class="far fa-edit"title="Confirmar modificación" ></i></button>
+          <button (click)="delTrabajos(trab)"  style = "margin-left: 10px;"><i class="far fa-trash-alt" title="Borrar dato académico"></i></button>
+          <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver modificación hecha"></i></button>
+        </p>
+          <br>
+      
+        
+        
+       <p class="table-light"></p>
+       
+
+    </tr>
+
+    </h5>
+
+</div>
+
+</ng-template>
+

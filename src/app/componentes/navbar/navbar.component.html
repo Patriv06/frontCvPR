@@ -1,0 +1,50 @@
+<div class="container-sm">
+    <div class="bg-img">
+      <div class="container-sm">
+         <img src="/assets/images/argprogsf.png"class="amarillo" alt="Argentina Programa"  >
+         <img src="/assets/images/pixlr-bg-result.png" class="in rounded-right" alt="Patricia Rivas"  > 
+        <div class="topnav a">
+        <li>
+          <a class="navbar-brand" href="https://instagram.com/patrivas06" target="_blank"><i class="fab fa-instagram" > </i>
+            </a>
+           
+          <a class="navbar-brand" href="https://www.facebook.com/privas06" target ="_blank"> <i class="fab fa-facebook" ></i>
+          </a>   
+          <a class="navbar-brand" href="https://github.com/Patriv06" target ="_blank"> <i class="fab fa-github" ></i>
+          </a>  
+          <a class="navbar-brand" href="https://www.linkedin.com/in/patricia-rivas-00758870/" target ="_blank"> <i class="fab fa-linkedin" ></i>
+          </a>  
+         
+          
+      
+       <ng-template [ngIf] ="this.permiso =='log'">
+         
+       <div class="navbar-brand">
+         <a href="iniciar-sesion">
+           <i class="fas fa-sign-in-alt" title="Login"></i>
+         </a>
+                
+        </div>
+        </ng-template> 
+   
+        <ng-template [ngIf] ="this.permiso=='editar'">
+         <div class="navbar-brand">
+          <button  (click)="logout()"><i class="fas fa-sign-out-alt" title="Logout"></i></button>
+         
+         </div>  
+          </ng-template>
+   
+          <ng-template [ngIf] ="this.permiso =='log'">
+         
+           <p></p>
+            </ng-template>
+       
+          </li>  
+      </div>
+    </div>
+    
+   </div>
+    </div>
+   
+   
+    

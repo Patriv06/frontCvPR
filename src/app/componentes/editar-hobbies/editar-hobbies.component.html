@@ -1,0 +1,62 @@
+<app-navbar-editar></app-navbar-editar>
+<ng-template [ngIf] ="this.permiso =='editar'">
+  <div class="container-sm">
+  <h5>
+    <div class="row">
+      <div class="col"><h3>Hobbies / Tiempo Libre </h3> 
+        <div  class="col text-danger"> <h6>Modo editar</h6> </div>
+        <div  class="col text-danger"> <h6>(Cada vez que confirme un Alta, Modificación o Baja haga click en el botón de Vista para ver reflejados los cambios)</h6> </div>
+      </div>
+        <div class="col"> </div>
+        <div class="col"> </div>
+      </div>
+   </h5>
+  </div>
+  <div class= "container-sm table-dark">
+  <h5>
+   <br>
+   <p>id: {{hob.id}}</p>
+ <p> Nombre   : <input type="string" [(ngModel)]="hob.nombreHobbie"></p>
+ <br>
+ <p> Descripción: <input type ="string" [(ngModel)] = "hob.descripcioHobbie"> </p>
+ 
+
+        <p><button (click)="altaHobbie(hob)" ><i class="fas fa-plus" title="Confirmar alta"></i></button>
+        <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver alta dada"></i></button>
+  </p>
+  <br>
+</h5>
+    </div>
+  
+    <div class= "container-sm table-dark">
+  <h5>
+    <tr *ngFor="let hob of hobb">
+      <p>id: {{hob.id}}</p>
+       <p> Nombre  : <input type="string" [(ngModel)]="hob.nombreHobbie"></p>
+        <p>Descripción          : <input type ="string" [(ngModel)] = "hob.descripcioHobbie"> </p>
+        
+         <p><button (click)="modifHobbie(hob)"><i class="far fa-edit"title="Confirmar modificación" ></i></button>
+          <button (click)="delHobbie(hob)"  style = "margin-left: 10px;"><i class="far fa-trash-alt" title="Borrar dato académico"></i></button>
+          <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver modificación hecha"></i></button>
+        </p>
+          <br>
+      
+        
+        
+       <p class="table-light"></p>
+       
+
+    </tr>
+
+    </h5>
+
+</div>
+
+</ng-template>
+
+
+
+
+
+
+

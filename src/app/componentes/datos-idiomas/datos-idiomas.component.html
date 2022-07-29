@@ -1,0 +1,43 @@
+<div class="container-sm">
+   
+    <ng-template [ngIf] ="this.permiso=='editar'">
+<h5>
+        <div class="row">
+            <div class="col"><H3>Idiomas</H3></div>
+            <div class="col"> </div>
+            <a class="col nav-link active"href="editar-idiomas"><img src="/assets/images/icons8-edit-24.png"  alt="modificacion"></a> 
+          </div>
+       
+    </h5>    
+    </ng-template>
+
+
+<ng-template [ngIf] ="this.permiso=='log'">
+<h5>
+    <div class="row">
+        <div class="col"><H3>Idiomas</H3></div>
+        <div class="col"> </div>
+        <div class="col"> </div>
+      </div>
+   </h5>
+    
+</ng-template>
+</div>
+<div class= "container-sm table-dark">
+   <h5>
+  <br>
+    <tr *ngFor="let idio of idi">
+        <p  class="col text-danger"> <strong>{{idio.nombreIdioma}}</strong></p>
+        <p>Nivel: <strong>{{idio.nivelIdioma}}</strong> </p>
+       
+
+        <hr>
+        <br>
+       
+       
+
+    </tr>
+
+    </h5>
+
+</div>

@@ -1,0 +1,58 @@
+<app-navbar-editar></app-navbar-editar>
+<ng-template [ngIf] ="this.permiso =='editar'">
+  <div class="container-sm">
+  <h5>
+    <div class="row">
+      <div class="col"><h3>Proyectos Realizados </h3> 
+        <div  class="col text-danger"> <h6>Modo editar</h6> </div>
+        <div  class="col text-danger"> <h6>(Cada vez que confirme un Alta, Modificación o Baja haga click en el botón de Vista para ver reflejados los cambios)</h6> </div>
+      </div>
+        <div class="col"> </div>
+        <div class="col"> </div>
+      </div>
+   </h5>
+  </div>
+  <div class= "container-sm table-dark">
+  <h5>
+   <br>
+
+ <p>Nombre: <input type ="string" [(ngModel)] = "proy.nombreProyecto "> </p>
+ 
+ <p>Descripción         : <input Type = "string" [(ngModel)] = "proy.descripcionProyecto"> </p>
+ <p>Fecha de inicio: <input type="date" [(ngModel)] ="proy.fechainicProyecto"></p>
+ <p>Fecha fin      : <input type="date" [(ngModel)] ="proy.fechafinProyecto"></p>
+ 
+
+        <p><button (click)="altaProyectos(proy)" ><i class="fas fa-plus" title="Confirmar alta"></i></button>
+        <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver alta dada"></i></button>
+  </p>
+  <br>
+</h5>
+    </div>
+  
+    <div class= "container-sm table-dark">
+  <h5>
+    <tr *ngFor="let pro of proyec">
+        <p>Nombre          :<input Type ="string" [(ngModel)]= "pro.nombreProyecto"> </p>
+        <p>Descripción         : <input Type = "string" [(ngModel)] = "pro.descripcionProyecto"> </p>
+        <p>Fecha de inicio: <input type="date" [(ngModel)] ="pro.fechainicProyecto"></p>
+        <p>Fecha fin      : <input type="date" [(ngModel)] ="pro.fechafinProyecto"></p>
+         <p><button (click)="modifProyectos(pro)"><i class="far fa-edit"title="Confirmar modificación" ></i></button>
+          <button (click)="delProyectos(pro)"  style = "margin-left: 10px;"><i class="far fa-trash-alt" title="Borrar dato académico"></i></button>
+          <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver modificación hecha"></i></button>
+        </p>
+          <br>
+      
+        
+        
+       <p class="table-light"></p>
+       
+
+    </tr>
+
+    </h5>
+
+</div>
+
+</ng-template>
+  

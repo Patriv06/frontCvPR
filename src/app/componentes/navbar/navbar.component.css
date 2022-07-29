@@ -1,0 +1,79 @@
+.navbarpersonal {
+    background-image: url('/assets/images/portada.jpg');
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: 100%;
+    
+    }
+
+   .gris {
+        position: absolute;
+    }
+    .amarillo {
+        z-index: 0;
+    }
+    .rojo {
+        z-index: 1;
+    }
+    .gris {
+        z-index: 2;
+    }
+    .verde {
+        z-index: 3;
+    }
+    .azul {
+        z-index: 100; 
+    }  
+    .logo{
+        width:100;
+        height:100
+    }
+    .imagen {
+        position: fixed;
+top: 40px; 
+left: 30px;
+    }
+    .bg-img {
+        /* The image used */
+        background-image: url('/assets/images/portada.jpg');
+      
+        min-height: 240px;
+      
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+        /* Needed to position the navbar */
+        position: relative;
+      }
+      
+      /* Position the navbar container inside the image */
+      .container {
+        position: -webkit-sticky;
+        margin: 20px;
+        width: auto;
+      }
+      
+      /* The navbar */
+      .topnav {
+        
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      /* Navbar links */
+      .topnav a {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }

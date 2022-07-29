@@ -1,0 +1,59 @@
+
+<div class="container-sm">
+   
+    <ng-template [ngIf] ="this.permiso=='editar'">
+    <h5>
+        <div class="row">
+            <div class="col"><h3>Sobre mi</h3></div>
+            <div class="col"> </div>
+            <a class="col nav-link active"href="editar-datos"><img src="/assets/images/icons8-edit-24.png"  alt="modificacion"></a> 
+          </div>
+       
+     </h5>   
+    </ng-template>
+
+
+<ng-template [ngIf] ="this.permiso=='log'">
+  <h5>
+    <div class="row">
+        <div class="col"><h3>Sobre mi</h3></div>
+        <div class="col"> </div>
+        <div class="col"> </div>
+      </div>
+   </h5>
+    
+</ng-template>
+</div>
+
+ <div class= "container-sm table-dark">
+    <h5> 
+        <tr *ngFor="let pers of perso">
+            
+            <br>
+            <div class="row">
+           <h3><div  class="col text-danger"> <strong>{{pers.nombre}}</strong>&nbsp;<strong>{{pers.apellido}}</strong> </div></h3> 
+           <div class="col"></div>
+          
+         <div class="col">Mis objetivos son : <strong>{{pers.objetivos}} </strong></div> 
+         
+           <div class="col"></div>
+           <div class="col">Sobre mi : <strong>{{pers.sobreMi}} </strong> </div>
+           </div>
+           <div class="row">
+            <div><p><a href="https://wa.me/{{pers.telefono}}" target ="_blank" title="Mandame un whatsapp"><i class="fab fa-whatsapp"></i></a> &nbsp;<strong> {{pers.telefono}} </strong></p> </div>
+           
+            </div>
+            <div class="row">
+            <div><p><a href="mailto:{{pers.mail}}? {subject} = {Vi tu currículum y me interesa}"  target ="_blank" title="Mandame un email"><i class="fas fa-envelope "></i></a>&nbsp;<strong> {{pers.mail}} </strong></p> </div>
+            <div class="col"></div>
+            <div class="col"></div>
+            
+            </div>
+            
+            
+            <br>
+        </tr>
+    </h5>
+        
+
+    </div>

@@ -1,0 +1,44 @@
+<app-navbar-editar></app-navbar-editar>
+<ng-template [ngIf] ="this.permiso =='editar'">
+
+
+  <div class="container-sm">  
+  <h5>
+    <div class="row">
+        <div class="col"><h3>Sobre mi </h3> 
+          <div  class="col text-danger"> <h6>Modo editar</h6> </div>
+          
+        </div>
+        <div class="col"> </div>
+        <div class="col"> </div>
+      </div>
+   </h5>
+   </div>
+   <div class= "container-sm table-dark">
+   <h5>
+        <tr *ngFor="let pers of perso">
+           <p>Nombre   : <strong>{{pers.nombre}}</strong></p>
+           <p>Apellido : <strong>{{pers.apellido}}</strong> </p>
+           <p>Teléfono :<input type="string" [(ngModel)]="pers.telefono"></p>
+           <p>Mail     :<input type="string" [(ngModel)]="pers.mail"></p>
+          
+           <br>
+           <p>Objetivos:<textarea class="form-control" 
+            name="message"
+            rows="8"
+            [(ngModel)]="pers.objetivos"
+            #message='ngModel'
+            ></textarea></p> 
+           <p>Sobre mi :<textarea class="form-control" 
+            name="message"
+            rows="8"
+            [(ngModel)]="pers.sobreMi"
+            #message='ngModel'></textarea></p>
+          <p><button (click)="modifPersona(pers)"> <i class="far fa-edit"title="Confirmar modificación" ></i></button>
+            <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver modificación hecha"></i></button>
+            </p>
+        </tr></h5>
+ 
+  </div>      
+
+</ng-template>

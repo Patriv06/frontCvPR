@@ -1,0 +1,23 @@
+{
+  "hosting": {
+    "public": "dist/quiero-ver",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "architect": {
+      "build": {
+        "builder": "@angular-devkit/build-angular:browser",
+        "options": {
+          "preserveSymlinks": true
+  }
+}}
+  }
+}
