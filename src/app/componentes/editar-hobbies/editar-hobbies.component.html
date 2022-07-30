@@ -14,11 +14,11 @@
   </div>
   <div class= "container-sm table-dark">
   <h5>
-   <br>
-  
- <p> Nombre  * : <input type="string" [(ngModel)]="hob.nombreHobbie"></p>
- <p  ><mark class="col text-danger"><strong>Complete datos si desea dar una nueva alta</strong></mark></p>
+   
+  <p  ><mark class="col text-danger"><strong>Complete datos si desea dar una nueva alta</strong></mark></p>
  <br>
+ <p> Nombre  * : <input type="string" [(ngModel)]="hob.nombreHobbie"></p>
+ 
  <p> Descripción : <input type ="string" [(ngModel)] = "hob.descripcioHobbie"> </p>
  
 
@@ -35,7 +35,7 @@
     <br>
     <tr *ngFor="let hob of hobb">
   
-       <p> Nombre  : <input type="string" [(ngModel)]="hob.nombreHobbie"></p>
+       <p> Nombre  *: <input type="string" [(ngModel)]="hob.nombreHobbie"></p>
         <p>Descripción          : <input type ="string" [(ngModel)] = "hob.descripcioHobbie"> </p>
         
         <p><button (click)="modifHobbie(hob)" class="btn btn-outline-primary">Confirmar modificación</button> &nbsp;

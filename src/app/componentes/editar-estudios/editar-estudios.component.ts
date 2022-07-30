@@ -42,13 +42,17 @@ this.estudiosServicio.obtenerEstudios().subscribe(dato =>{this.estud = dato});
 
  }
 public modifEstudios(est:Estudios){
-   console.log(est);
-   console.log("Estoy en modificar estudios");
+  if (est.institucionEstudios != " "){
+    if (est.fechainicEstudios < est.fechafinEstudios){
    this.estudiosServicio.modificarEstudios(est).subscribe(()=>this.traerEstudios())
-
+  }
+  else {
+   
+    alert("la fecha de inicio debe ser menor a la fecha de fin")}
+  
+} else{  alert("El nombre no puede estar en blanco")}
  
- }
-
+}
  public delEstudios(estudios:Estudios):void{
    this.estudiosServicio.borrarEstudios(estudios).subscribe(()=>this.traerEstudios());
    
@@ -56,12 +60,16 @@ public modifEstudios(est:Estudios){
 }
 public altaEstudios(estu:Estudios){
   if (estu.institucionEstudios != " "){
- console.log(estu);
- console.log("Estoy en alta Estudios");
+    if (estu.fechainicEstudios < estu.fechafinEstudios){
+
  this.estudiosServicio.crearEstudios(estu).subscribe((dato: { id: number; tituloEstudios: string;institucionEstudios: string; nivelEstudios: string; redesEstudios: string; fechainicEstudios: Date; fechafinEstudios: Date; }) =>this.traerEstudios());
-  }
-  else{  alert("El nombre no puede estar en blanco")}
+}
+else {
  
+  alert("la fecha de inicio debe ser menor a la fecha de fin")}
+
+} else{  alert("El nombre no puede estar en blanco")}
+
 }
 recargar(): void {
  window.location.reload();

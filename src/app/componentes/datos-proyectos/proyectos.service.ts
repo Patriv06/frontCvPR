@@ -16,7 +16,7 @@ export class ProyectosService {
     proy = {
       id:1,
       nombreProyecto:" ",
-      descripcionProyecto:" ",
+      descripcioProyecto:" ",
       fechainicProyecto:new Date(),
       fechafinProyecto: new Date()
     }
@@ -27,7 +27,7 @@ export class ProyectosService {
     
   
     obtenerProyectos():Observable<Proyectos[]>{
-      console.log("Estoy en Obtener:"+ Proyectos)
+      console.log("Estoy en Obtener:", Proyectos)
     
       return this.httpClient.get <Proyectos[]>(`${this.baseURL}`);
       
@@ -35,19 +35,19 @@ export class ProyectosService {
     }
   
     modificarProyectos( proyectos:Proyectos) { 
-      console.log("Estoy en modificar:"+ proyectos)
+      console.log("Estoy en modificar:", proyectos)
      return this.httpClient.put<Proyectos>(`${this.modifURL}`, proyectos)
     
     
     }
   
     borrarProyectos(proyectos:Proyectos){
-      console.log("Estoy en Borrar:"+ proyectos)
+      console.log("Estoy en Borrar:", proyectos)
       
      return this.httpClient.delete<Proyectos>(this.delURL+proyectos.id)
     }
     crearProyectos(proyectos:Proyectos){
-      console.log("Estoy en Crear:"+ proyectos)
+      console.log("Estoy en Crear:", proyectos)
       return this.httpClient.post<Proyectos>(`${this.altaURL}`, proyectos)
     }
   

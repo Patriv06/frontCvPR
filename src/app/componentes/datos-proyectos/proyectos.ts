@@ -1,7 +1,7 @@
 export class Proyectos {
     id!: number;
     nombreProyecto!: string;
-    descripcionProyecto!: string;
+    descripcioProyecto!: string;
     fechainicProyecto!: Date;
     fechafinProyecto!: Date;
 }

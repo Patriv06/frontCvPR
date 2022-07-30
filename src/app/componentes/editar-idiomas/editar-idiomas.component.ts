@@ -31,9 +31,9 @@ private traerIdioma(){
   this.idiomaServicio.obtenerIdioma().subscribe(dato =>{this.idiom= dato})}
 
 public modifIdioma(idi:Idioma){
-   
-    this.idiomaServicio.modificarIdioma(idi).subscribe(()=>this.traerIdioma());
-   
+  if (idi.nombreIdioma!= " "){
+    this.idiomaServicio.modificarIdioma(idi).subscribe(()=>this.traerIdioma());}
+    else{  alert("El nombre no puede estar en blanco")}
   }
 
   public delIdioma(idioma:Idioma):void{

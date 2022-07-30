@@ -22,7 +22,7 @@ export class EditarProyectosComponent implements OnInit {
  proy = {
   id:1,
   nombreProyecto:" ",
-  descripcionProyecto:" ",
+  descripcioProyecto:" ",
   fechainicProyecto:new Date(),
   fechafinProyecto: new Date()
 }
@@ -34,12 +34,18 @@ export class EditarProyectosComponent implements OnInit {
   this.proyectosServicio.obtenerProyectos().subscribe(dato =>{this.proyec = dato})
    }
  public modifProyectos(pro:Proyectos){
-     console.log(pro);
-     console.log("Estoy en modificar proyectos");
-     this.proyectosServicio.modificarProyectos(pro).subscribe(()=>this.traerProyectos())
+  if (pro.nombreProyecto != " "){
+    if (pro.fechainicProyecto < pro.fechafinProyecto){
+   this.proyectosServicio.modificarProyectos(pro).subscribe(()=>this.traerProyectos())
+  }
+  else {alert("la fecha de inicio debe ser menor a la fecha de fin")}
+  
+} else{  alert("El nombre no puede estar en blanco")}
+ 
+}
      
      
-   }
+   
  
    public delProyectos(proyectos:Proyectos):void{
      this.proyectosServicio.borrarProyectos(proyectos).subscribe(()=>this.traerProyectos());
@@ -51,10 +57,14 @@ export class EditarProyectosComponent implements OnInit {
   }
   public altaProyectos(pro:Proyectos){
     if (pro.nombreProyecto != " "){
-   this.proyectosServicio.crearProyectos(pro).subscribe((dato: { id: number; nombreProyecto: string; descripcionProyecto: string; fechainicProyecto: Date; fechafinProyecto: Date; }) =>{pro= dato});
-    }else{  alert("El nombre no puede estar en blanco")}
- 
- }
+      if (pro.fechainicProyecto < pro.fechafinProyecto){
+   this.proyectosServicio.crearProyectos(pro).subscribe((dato: { id: number; nombreProyecto: string; descripcioProyecto: string; fechainicProyecto: Date; fechafinProyecto: Date; }) =>{pro= dato});
+      }
+else {alert("la fecha de inicio debe ser menor a la fecha de fin")}
+
+} else{  alert("El nombre no puede estar en blanco")}
+
+}
  recargar(): void {
    window.location.reload();
  }

@@ -33,7 +33,7 @@
     <p  ><mark class="col text-danger"><strong>Complete datos a modificar o presione borrar para quitar dato </strong></mark></p>
     <br>
     <tr *ngFor="let idi of idiom">
-       <p> Indioma    : <input type="string" [(ngModel)]="idi.nombreIdioma"></p>
+       <p> Idioma  *  : <input type="string" [(ngModel)]="idi.nombreIdioma"></p>
         <p>Nivel          : <input type ="string" [(ngModel)] = "idi.nivelIdioma"> </p>
         
           <p><button (click)="modifIdioma(idi)" class="btn btn-outline-primary">Confirmar modificación</button> &nbsp;

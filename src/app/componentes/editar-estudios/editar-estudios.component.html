@@ -5,7 +5,7 @@
   <div class="container-sm">
   <h5>
     <div class="row">
-      <div class="col"><h3><kbd>Datos académicos </kbd></h3> 
+      <div class="col"><h3><kbd>Formación </kbd></h3> 
         <div  class="col text-danger"> <h6>Modo editar</h6> </div>
         <div  class="col text-danger">  </div>
       </div>
@@ -39,7 +39,7 @@
     <p  ><mark class="col text-danger"><strong>Complete datos a modificar o presione borrar para quitar dato </strong></mark></p>
     <br>
     <tr *ngFor="let est of estud">
-       <p> Institución    : <input type="string" [(ngModel)]="est.institucionEstudios" ng-required ="true"></p>
+       <p> Institución *   : <input type="string" [(ngModel)]="est.institucionEstudios" ng-required ="true"></p>
         <p>Nivel          : <input type ="string" [(ngModel)] = "est.nivelEstudios"> </p>
         <p>redes          :<input Type ="string" [(ngModel)]= "est.redesEstudios"> </p>
         <p>Título         : <input Type = "string" [(ngModel)] = "est.tituloEstudios"> </p>

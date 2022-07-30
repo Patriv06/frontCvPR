@@ -18,8 +18,9 @@ export class DatosTrabajosComponent implements OnInit {
  }
  
  private traerTrabajos(){
+ 
    this.trabajosServicio.obtenerTrabajos().subscribe(dato =>{this.trabaj = dato})
-   
+    
     console.log(this.trabaj);
     }
     ngAfterViewChecked() {   

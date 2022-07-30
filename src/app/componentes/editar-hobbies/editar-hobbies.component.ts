@@ -32,9 +32,10 @@ private traerHobbie(){
   this.hobbiServicio.obtenerHobbie().subscribe(dato =>{this.hobb= dato})}
 
 public modifHobbie(hob:Hobbies){
-   
+  if (hob.nombreHobbie != " "){
     this.hobbiServicio.modificarHobbie(hob).subscribe(()=>this.traerHobbie());
-    
+  }
+  else{  alert("El nombre no puede estar en blanco")}
   }
 
   public delHobbie(hobbie:Hobbies):void{

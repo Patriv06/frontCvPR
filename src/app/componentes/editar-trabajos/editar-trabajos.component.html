@@ -5,7 +5,7 @@
   <div class="container-sm">
   <h5>
     <div class="row">
-      <div class="col"><h3><kbd>Trabajos realizados</kbd> </h3> 
+      <div class="col"><h3><kbd>Experiencia laboral</kbd> </h3> 
         <div  class="col text-danger"> <h6>Modo editar</h6> </div>
         <div  class="col text-danger">  </div>
       </div>
@@ -47,7 +47,7 @@
     <p  ><mark class="col text-danger"><strong>Complete datos a modificar o presione borrar para quitar dato </strong></mark></p>
     <br>
     <tr *ngFor="let trab of trabaj">
-       <p>Lugar    : <input type="string" [(ngModel)]="trab.nombreTrabajo"></p>
+       <p>Lugar *   : <input type="string" [(ngModel)]="trab.nombreTrabajo"></p>
        <p>Puesto         : <input type ="string" [(ngModel)] = "trab.puestoTrabajo"> </p>
        <p>Descripción:<textarea class="form-control" 
         name="message"
@@ -58,7 +58,7 @@
        <p>Tipo         : <input Type = "string" [(ngModel)] = "trab.tipoTrabajo"> </p>
        <p>Redes      : <input Type = "string" [(ngModel)] = "trab.redesTrabajo"> </p>
        <p>Fecha de inicio: <input type="date" [(ngModel)] ="trab.fechainicTrabajo"></p>
-       <p>Fecha fin      : <input type="date" [(ngModel)] ="trab.fechafinTrabajo"></p>
+       <p>Fecha fin      : <input type="date" [(ngModel)] ="trab.fechafinTrabajo"> Ingrese 09/09/9999 para actual</p>
        <p><button (click)="modifTrabajos(trab)" class="btn btn-outline-primary">Confirmar modificación</button> &nbsp;
         <button (click)="delTrabajos(trab)"  class="btn btn-outline-danger">Borrar dato </button></p>
      

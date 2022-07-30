@@ -19,7 +19,7 @@
 
  <p>Nombre *: <input type ="string" [(ngModel)] = "proy.nombreProyecto "> </p>
  
- <p>Descripción         : <input Type = "string" [(ngModel)] = "proy.descripcionProyecto"> </p>
+ <p>Descripción         : <input Type = "string" [(ngModel)] = "proy.descripcioProyecto"> </p>
  <p>Fecha de inicio: <input type="date" [(ngModel)] ="proy.fechainicProyecto"></p>
  <p>Fecha fin      : <input type="date" [(ngModel)] ="proy.fechafinProyecto"></p>
  
@@ -36,8 +36,8 @@
     <p  ><mark class="col text-danger"><strong>Complete datos a modificar o presione borrar para quitar dato </strong></mark></p>
     <br>
     <tr *ngFor="let pro of proyec">
-        <p>Nombre          :<input Type ="string" [(ngModel)]= "pro.nombreProyecto"> </p>
-        <p>Descripción         : <input Type = "string" [(ngModel)] = "pro.descripcionProyecto"> </p>
+        <p>Nombre        *  :<input Type ="string" [(ngModel)]= "pro.nombreProyecto"> </p>
+        <p>Descripción         : <input Type = "string" [(ngModel)] = "pro.descripcioProyecto"> </p>
         <p>Fecha de inicio: <input type="date" [(ngModel)] ="pro.fechainicProyecto"></p>
         <p>Fecha fin      : <input type="date" [(ngModel)] ="pro.fechafinProyecto"></p>
         <p><button (click)="modifProyectos(pro)" class="btn btn-outline-primary">Confirmar modificación</button> &nbsp;
