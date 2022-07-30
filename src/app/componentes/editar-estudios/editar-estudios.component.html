@@ -5,7 +5,7 @@
   <div class="container-sm">
   <h5>
     <div class="row">
-      <div class="col"><h3>Datos académicos </h3> 
+      <div class="col"><h3><kbd>Datos académicos </kbd></h3> 
         <div  class="col text-danger"> <h6>Modo editar</h6> </div>
         <div  class="col text-danger">  </div>
       </div>
@@ -16,17 +16,18 @@
   </div>
   <div class= "container-sm table-dark">
   <h5>
+    
+    <p  ><mark class="col text-danger"><strong>Complete datos si desea dar una nueva alta</strong></mark></p>
    <br>
- <p>Institución    : <input type="string" [(ngModel)]="est.institucionEstudios"></p>
+ <p>Institución  *  : <input type="string"  [(ngModel)]="est.institucionEstudios"  ></p>
  <p>Nivel          : <input type ="string" [(ngModel)] = "est.nivelEstudios "> </p>
  <p>Redes          :<input Type ="string" [(ngModel)]= "est.redesEstudios"> </p>
  <p>Título         : <input Type = "string" [(ngModel)] = "est.tituloEstudios"> </p>
  <p>Fecha de inicio: <input type="date" [(ngModel)] ="est.fechainicEstudios"></p>
  <p>Fecha fin      : <input type="date" [(ngModel)] ="est.fechafinEstudios"></p>
  
-
-        <p><button (click)="altaEstudios(est)" ><i class="fas fa-plus" title="Confirmar alta"></i></button>
-        <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver alta dada"></i></button>
+ <p><button (click)="altaEstudios(est); recargar()" class="btn btn-outline-success">Confirmar alta</button>
+       
   </p>
   <br>
  
@@ -35,17 +36,19 @@
   
     <div class= "container-sm table-dark">
   <h5>
+    <p  ><mark class="col text-danger"><strong>Complete datos a modificar o presione borrar para quitar dato </strong></mark></p>
+    <br>
     <tr *ngFor="let est of estud">
-       <p> Institución    : <input type="string" [(ngModel)]="est.institucionEstudios"></p>
+       <p> Institución    : <input type="string" [(ngModel)]="est.institucionEstudios" ng-required ="true"></p>
         <p>Nivel          : <input type ="string" [(ngModel)] = "est.nivelEstudios"> </p>
         <p>redes          :<input Type ="string" [(ngModel)]= "est.redesEstudios"> </p>
         <p>Título         : <input Type = "string" [(ngModel)] = "est.tituloEstudios"> </p>
         <p>Fecha de inicio: <input type="date" [(ngModel)] ="est.fechainicEstudios"></p>
         <p>Fecha fin      : <input type="date" [(ngModel)] ="est.fechafinEstudios"></p>
-         <p><button (click)="modifEstudios(est)"><i class="far fa-edit"title="Confirmar modificación" ></i></button>
-          <button (click)="delEstudios(est)"  style = "margin-left: 10px;"><i class="far fa-trash-alt" title="Borrar dato académico"></i></button>
-          <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver modificación hecha"></i></button>
-        </p>
+        <p><button (click)="modifEstudios(est)" class="btn btn-outline-primary">Confirmar modificación</button> &nbsp;
+          <button (click)="delEstudios(est)"  class="btn btn-outline-danger">Borrar dato </button></p>
+       
+     
           <br>
       
         

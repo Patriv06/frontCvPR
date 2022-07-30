@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Hobbies } from './hobbies';
 import { HobbiesService } from './hobbies.service';
 
@@ -11,15 +12,15 @@ export class DatosHobbiesComponent implements OnInit {
 
   hob!: Hobbies[];
   public permiso: any;  
-  constructor(private hobbieServicio:HobbiesService) { }
+  constructor(private hobbiesServicio:HobbiesService) { }
 
   ngOnInit(): void {
-     this.traerHobbie();
+     this.traerHobbies();
   
  }
  
- private traerHobbie(){
-   this.hobbieServicio.obtenerHobbie().subscribe(dato =>{this.hob = dato})
+ private traerHobbies(){
+   this.hobbiesServicio.obtenerHobbie().subscribe(dato =>{this.hob = dato})
    
     console.log(this.hob);
     }

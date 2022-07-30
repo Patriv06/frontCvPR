@@ -42,14 +42,11 @@ export class EditarDatosComponent implements OnInit {
      }
 
   public modifPersona(pers:Persona){
-    console.log(pers);
-    console.log("Estoy en modificar persona")
- 
+   
+      this.personaServicio.modificarPersona(pers).subscribe(()=>this.traerPersona())
+      this.recargar()
     
-    this.personaServicio.modificarPersona(pers).subscribe((dato: { idPersona: number; nombre: string; apellido: string; fechaNac: number; telefono: string; mail: string; objetivos: string; sobreMi: string; }) =>{pers = dato})
-
-
-  }
+    }
   ngAfterViewChecked() {   
 
     this.permiso = localStorage.getItem('permiso');

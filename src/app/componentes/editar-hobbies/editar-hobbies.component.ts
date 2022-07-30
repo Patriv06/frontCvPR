@@ -33,20 +33,21 @@ private traerHobbie(){
 
 public modifHobbie(hob:Hobbies){
    
-    this.hobbiServicio.modificarHobbie(hob).subscribe(dato =>{hob = dato});
+    this.hobbiServicio.modificarHobbie(hob).subscribe(()=>this.traerHobbie());
     
   }
 
   public delHobbie(hobbie:Hobbies):void{
-   this.hobbiServicio.borrarHobbie(hobbie).subscribe(dato=>{hobbie = dato});
+   this.hobbiServicio.borrarHobbie(hobbie).subscribe(()=>this.traerHobbie());
   
    
  }
  public altaHobbie(hobbi:Hobbies){
-  
+  if (hobbi.nombreHobbie != " "){
   this.hobbiServicio.crearHobbie(hobbi).subscribe((dato: { id: number; nombreHobbie: string; descripcioHobbie: string;}) =>{hobbi = dato});
-  
-  
+
+  }
+  else{  alert("El nombre no puede estar en blanco")}
 }
 recargar(): void {
   window.location.reload();

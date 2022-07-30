@@ -31,24 +31,22 @@ private traerIdioma(){
   this.idiomaServicio.obtenerIdioma().subscribe(dato =>{this.idiom= dato})}
 
 public modifIdioma(idi:Idioma){
-    console.log(idi);
-    console.log("Estoy en modificar idioma");
-    this.idiomaServicio.modificarIdioma(idi).subscribe(dato =>{idi = dato});
+   
+    this.idiomaServicio.modificarIdioma(idi).subscribe(()=>this.traerIdioma());
    
   }
 
   public delIdioma(idioma:Idioma):void{
-   this.idiomaServicio.borrarIdioma(idioma).subscribe(dato=>{idioma = dato});
+   this.idiomaServicio.borrarIdioma(idioma).subscribe(()=>this.traerIdioma());
 
  
  
 
  }
  public altaIdioma(idi:Idioma){
-  console.log(idi);
-  console.log("Estoy en alta idioma");
-  this.idiomaServicio.crearIdioma(idi).subscribe((dato: { id: number; nombreIdioma: string; nivelIdioma: string;}) =>{idi = dato});
- 
+  if (idi.nombreIdioma!= " "){
+  this.idiomaServicio.crearIdioma(idi).subscribe((dato: { id: number; nombreIdioma: string; nivelIdioma: string;}) =>{idi = dato});}
+ else{  alert("El nombre no puede estar en blanco")}
   
 }
 recargar(): void {

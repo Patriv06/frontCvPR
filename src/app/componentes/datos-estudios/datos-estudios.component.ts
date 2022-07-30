@@ -20,13 +20,12 @@ export class DatosEstudiosComponent implements OnInit {
  private traerEstudios(){
    this.estudiosServicio.obtenerEstudios().subscribe(dato =>{this.estud = dato})
    
-    console.log(this.estud);
+    
     }
     ngAfterViewChecked() {   
 
       this.permiso =localStorage.getItem('permiso');
-      console.log(this.permiso);
-      console.log("ngAfterViewChecked");
+      
       return this.permiso
   
     }

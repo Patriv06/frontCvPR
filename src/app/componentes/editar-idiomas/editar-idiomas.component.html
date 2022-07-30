@@ -3,9 +3,9 @@
   <div class="container-sm">
   <h5>
     <div class="row">
-      <div class="col"><h3>Idiomas </h3> 
+      <div class="col"><h3><kbd>Idiomas </kbd></h3> 
         <div  class="col text-danger"> <h6>Modo editar</h6> </div>
-        <div  class="col text-danger"> <h6>(Cada vez que confirme un Alta, Modificación o Baja haga click en el botón de Vista para ver reflejados los cambios)</h6> </div>
+        
       </div>
         <div class="col"> </div>
         <div class="col"> </div>
@@ -14,29 +14,33 @@
   </div>
   <div class= "container-sm table-dark">
   <h5>
+    <p  ><mark class="col text-danger"><strong>Complete datos si desea dar una nueva alta</strong></mark></p>
    <br>
- <p>Idioma    : <input type="string" [(ngModel)]="idio.nombreIdioma"></p>
+ <p>Idioma *   : <input type="string" [(ngModel)]="idio.nombreIdioma"></p>
  <p>Nivel          : <input type ="string" [(ngModel)] = "idio.nivelIdioma "> </p>
  
 
-        <p><button (click)="altaIdioma(idio)" ><i class="fas fa-plus" title="Confirmar alta"></i></button>
-        <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver alta dada"></i></button>
-  </p>
-  <br>
+ <p><button (click)="altaIdioma(idio); recargar()" class="btn btn-outline-success">Confirmar alta</button>
+       
+ </p>
+ <br>
+
 </h5>
     </div>
   
     <div class= "container-sm table-dark">
   <h5>
+    <p  ><mark class="col text-danger"><strong>Complete datos a modificar o presione borrar para quitar dato </strong></mark></p>
+    <br>
     <tr *ngFor="let idi of idiom">
        <p> Indioma    : <input type="string" [(ngModel)]="idi.nombreIdioma"></p>
         <p>Nivel          : <input type ="string" [(ngModel)] = "idi.nivelIdioma"> </p>
         
-         <p><button (click)="modifIdioma(idi)"><i class="far fa-edit"title="Confirmar modificación" ></i></button>
-          <button (click)="delIdioma(idi)"  style = "margin-left: 10px;"><i class="far fa-trash-alt" title="Borrar dato académico"></i></button>
-          <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver modificación hecha"></i></button>
-        </p>
-          <br>
+          <p><button (click)="modifIdioma(idi)" class="btn btn-outline-primary">Confirmar modificación</button> &nbsp;
+            <button (click)="delIdioma(idi)"  class="btn btn-outline-danger">Borrar dato </button></p>
+         
+       
+            <br>
       
         
         

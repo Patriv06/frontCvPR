@@ -36,13 +36,13 @@ export class EditarProyectosComponent implements OnInit {
  public modifProyectos(pro:Proyectos){
      console.log(pro);
      console.log("Estoy en modificar proyectos");
-     this.proyectosServicio.modificarProyectos(pro).subscribe(dato=>{pro= dato})
+     this.proyectosServicio.modificarProyectos(pro).subscribe(()=>this.traerProyectos())
      
      
    }
  
    public delProyectos(proyectos:Proyectos):void{
-     this.proyectosServicio.borrarProyectos(proyectos).subscribe(dato=>{proyectos= dato});
+     this.proyectosServicio.borrarProyectos(proyectos).subscribe(()=>this.traerProyectos());
    
     
   
@@ -50,10 +50,10 @@ export class EditarProyectosComponent implements OnInit {
  
   }
   public altaProyectos(pro:Proyectos){
-   console.log(pro);
-   console.log("Estoy en alta Proyectos");
+    if (pro.nombreProyecto != " "){
    this.proyectosServicio.crearProyectos(pro).subscribe((dato: { id: number; nombreProyecto: string; descripcionProyecto: string; fechainicProyecto: Date; fechafinProyecto: Date; }) =>{pro= dato});
-   
+    }else{  alert("El nombre no puede estar en blanco")}
+ 
  }
  recargar(): void {
    window.location.reload();

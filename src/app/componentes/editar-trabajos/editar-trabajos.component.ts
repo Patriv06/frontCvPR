@@ -52,10 +52,9 @@ public modifTrabajos(tra:Trabajos){
 
  }
  public altaTrabajos(tra:Trabajos){
-  console.log(tra);
-  console.log("Estoy en alta trabajos");
+  if (tra.nombreTrabajo!= " "){
   this.trabajoServicio.crearTrabajos(tra).subscribe((dato: { id: number; nombreTrabajo: string; puestoTrabajo: string; descripcionTrabajo: string; tipoTrabajo: string; redesTrabajo:string; fechainicTrabajo: Date; fechafinTrabajo: Date; })=>this.traerTrabajos());
-  this.recargar()
+  }else{  alert("El Lugar no puede estar en blanco")}
 }
 recargar(): void {
   window.location.reload();

@@ -55,10 +55,12 @@ public modifEstudios(est:Estudios){
    
 }
 public altaEstudios(estu:Estudios){
+  if (estu.institucionEstudios != " "){
  console.log(estu);
- console.log("Estoy en alta trabajos");
+ console.log("Estoy en alta Estudios");
  this.estudiosServicio.crearEstudios(estu).subscribe((dato: { id: number; tituloEstudios: string;institucionEstudios: string; nivelEstudios: string; redesEstudios: string; fechainicEstudios: Date; fechafinEstudios: Date; }) =>this.traerEstudios());
- this.recargar()
+  }
+  else{  alert("El nombre no puede estar en blanco")}
  
 }
 recargar(): void {

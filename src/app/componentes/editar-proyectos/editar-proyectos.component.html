@@ -3,9 +3,9 @@
   <div class="container-sm">
   <h5>
     <div class="row">
-      <div class="col"><h3>Proyectos Realizados </h3> 
+      <div class="col"><h3><kbd>Proyectos Realizados</kbd> </h3> 
         <div  class="col text-danger"> <h6>Modo editar</h6> </div>
-        <div  class="col text-danger"> <h6>(Cada vez que confirme un Alta, Modificación o Baja haga click en el botón de Vista para ver reflejados los cambios)</h6> </div>
+       
       </div>
         <div class="col"> </div>
         <div class="col"> </div>
@@ -14,33 +14,36 @@
   </div>
   <div class= "container-sm table-dark">
   <h5>
-   <br>
+    <p  ><mark class="col text-danger"><strong>Complete datos si desea dar una nueva alta</strong></mark></p>
+    <br>
 
- <p>Nombre: <input type ="string" [(ngModel)] = "proy.nombreProyecto "> </p>
+ <p>Nombre *: <input type ="string" [(ngModel)] = "proy.nombreProyecto "> </p>
  
  <p>Descripción         : <input Type = "string" [(ngModel)] = "proy.descripcionProyecto"> </p>
  <p>Fecha de inicio: <input type="date" [(ngModel)] ="proy.fechainicProyecto"></p>
  <p>Fecha fin      : <input type="date" [(ngModel)] ="proy.fechafinProyecto"></p>
  
 
-        <p><button (click)="altaProyectos(proy)" ><i class="fas fa-plus" title="Confirmar alta"></i></button>
-        <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver alta dada"></i></button>
-  </p>
-  <br>
+ <p><button (click)="altaProyectos(proy); recargar()" class="btn btn-outline-success">Confirmar alta</button>
+       
+ </p>
+ <br>
 </h5>
     </div>
   
     <div class= "container-sm table-dark">
   <h5>
+    <p  ><mark class="col text-danger"><strong>Complete datos a modificar o presione borrar para quitar dato </strong></mark></p>
+    <br>
     <tr *ngFor="let pro of proyec">
         <p>Nombre          :<input Type ="string" [(ngModel)]= "pro.nombreProyecto"> </p>
         <p>Descripción         : <input Type = "string" [(ngModel)] = "pro.descripcionProyecto"> </p>
         <p>Fecha de inicio: <input type="date" [(ngModel)] ="pro.fechainicProyecto"></p>
         <p>Fecha fin      : <input type="date" [(ngModel)] ="pro.fechafinProyecto"></p>
-         <p><button (click)="modifProyectos(pro)"><i class="far fa-edit"title="Confirmar modificación" ></i></button>
-          <button (click)="delProyectos(pro)"  style = "margin-left: 10px;"><i class="far fa-trash-alt" title="Borrar dato académico"></i></button>
-          <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver modificación hecha"></i></button>
-        </p>
+        <p><button (click)="modifProyectos(pro)" class="btn btn-outline-primary">Confirmar modificación</button> &nbsp;
+          <button (click)="delProyectos(pro)"  class="btn btn-outline-danger">Borrar dato </button></p>
+       
+     
           <br>
       
         

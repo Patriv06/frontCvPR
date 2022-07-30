@@ -5,7 +5,7 @@
   <div class="container-sm">
   <h5>
     <div class="row">
-      <div class="col"><h3>Trabajos realizasdos </h3> 
+      <div class="col"><h3><kbd>Trabajos realizados</kbd> </h3> 
         <div  class="col text-danger"> <h6>Modo editar</h6> </div>
         <div  class="col text-danger">  </div>
       </div>
@@ -16,8 +16,10 @@
   </div>
   <div class= "container-sm table-dark">
   <h5>
+    
+    <p  ><mark class="col text-danger"><strong>Complete datos si desea dar una nueva alta</strong></mark></p>
    <br>
- <p>Lugar    : <input type="string" [(ngModel)]="trab.nombreTrabajo"></p>
+ <p>Lugar  *  : <input type="string" [(ngModel)]="trab.nombreTrabajo"></p>
  <p>Puesto         : <input type ="string" [(ngModel)] = "trab.puestoTrabajo"> </p>
  <p>Descripción:<textarea class="form-control" 
   name="message"
@@ -31,16 +33,19 @@
  <p>Fecha fin      : <input type="date" [(ngModel)] ="trab.fechafinTrabajo"></p>
  
 
-        <p><button (click)="altaTrabajos(trab)" ><i class="fas fa-plus" title="Confirmar alta"></i></button>
-        <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver alta dada"></i></button>
-  </p>
-  <br>
+ <p><button (click)="altaTrabajos(trab); recargar()" class="btn btn-outline-success">Confirmar alta</button>
+       
+ </p>
+ <br>
+
  
 </h5>
     </div>
   
     <div class= "container-sm table-dark">
   <h5>
+    <p  ><mark class="col text-danger"><strong>Complete datos a modificar o presione borrar para quitar dato </strong></mark></p>
+    <br>
     <tr *ngFor="let trab of trabaj">
        <p>Lugar    : <input type="string" [(ngModel)]="trab.nombreTrabajo"></p>
        <p>Puesto         : <input type ="string" [(ngModel)] = "trab.puestoTrabajo"> </p>
@@ -54,11 +59,11 @@
        <p>Redes      : <input Type = "string" [(ngModel)] = "trab.redesTrabajo"> </p>
        <p>Fecha de inicio: <input type="date" [(ngModel)] ="trab.fechainicTrabajo"></p>
        <p>Fecha fin      : <input type="date" [(ngModel)] ="trab.fechafinTrabajo"></p>
-         <p><button (click)="modifTrabajos(trab)"><i class="far fa-edit"title="Confirmar modificación" ></i></button>
-          <button (click)="delTrabajos(trab)"  style = "margin-left: 10px;"><i class="far fa-trash-alt" title="Borrar dato académico"></i></button>
-          <button (click)="recargar()" style = "margin-left: 10px;"  ><i class="far fa-eye" title="Ver modificación hecha"></i></button>
-        </p>
-          <br>
+       <p><button (click)="modifTrabajos(trab)" class="btn btn-outline-primary">Confirmar modificación</button> &nbsp;
+        <button (click)="delTrabajos(trab)"  class="btn btn-outline-danger">Borrar dato </button></p>
+     
+   
+        <br>
       
         
         
