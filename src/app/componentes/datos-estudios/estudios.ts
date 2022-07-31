@@ -7,3 +7,4 @@ export class Estudios {
     fechainicEstudios!: Date;
     fechafinEstudios!: Date;
 }
+   

@@ -26,8 +26,7 @@ export class DatosProyectosComponent implements OnInit {
     ngAfterViewChecked() {   
 
       this.permiso =localStorage.getItem('permiso');
-      console.log(this.permiso);
-      console.log("ngAfterViewChecked");
+     
       return this.permiso
   
     }

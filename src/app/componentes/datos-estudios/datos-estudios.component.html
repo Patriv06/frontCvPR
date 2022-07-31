@@ -23,20 +23,19 @@
     
 </ng-template>
 </div>
-<div class= "container-sm table-dark">
+<div class= "container-sm table-dark"> 
    <h5>
   <br>
     <tr *ngFor="let est of estud">
         <p  class="col text-danger"> <strong>{{est.institucionEstudios}}</strong></p>
-        <p> <strong> {{est.fechainicEstudios | date: "dd/MM/yyyy"}} - {{est.fechafinEstudios | date: "dd/MM/yyyy"}}</strong> </p>
-        <p>Nivel: <strong>{{est.nivelEstudios}}</strong> </p>
-        <p>Redes:<strong> {{est.redesEstudios}} </strong> </p>
-        <p>Título:<strong> {{est.tituloEstudios}} </strong> </p>
+        <p> <strong> {{est.fechafinEstudios| date: "dd/MM/yyyy"}} - {{est.fechafinEstudios| date: "dd/MM/yyyy"}}</strong> </p>
         
+        <p>Nivel:<strong> {{est.nivelEstudios}} </strong> </p>
+        <p>Título: <strong>{{est.tituloEstudios}}</strong></p>
+        <p>Redes:<strong>{{est.redesEstudios}}</strong></p>
         
-    
 
-        
+        <hr>
         <br>
        
        
@@ -46,3 +45,5 @@
     </h5>
 
 </div>
+
+   
